@@ -9,7 +9,7 @@ title: Android静态代码扫描实践—1、静态代码扫描概述与初识kt
 ## 问题举例
 
 - 日志打印
-  必须使用统一封装的打印方法，禁止使用System.out.print\android.util.Log，方便release版本禁止在 logcat 输出信息出现数据泄露的情况。
+  必须使用统一封装的打印方法，禁止使用 System.out.print\android.util.Log ，方便 release 版本禁止在 logcat 输出信息出现数据泄露的情况。
 
   错误示范
   ```
@@ -45,20 +45,20 @@ title: Android静态代码扫描实践—1、静态代码扫描概述与初识kt
   }
   ```
 
-- 还有诸如必须给继承Activity、Fragment的文件添加注释方便理解；Activity必须继承Activity基础类；Fragment必须继承Fragment基础类等团队开发规范问题。
+- 还有诸如必须给继承Activity、Fragment的文件添加注释方便理解； Activity 必须继承 Activity基础类； Fragment 必须继承 Fragment基础类等团队开发规范问题。
 
 ## 静态代码扫描工具的选择
 
-由于我们团队开发已实现全Kotlin化，Kotlin常用的静态代码扫描方案有[Detekt](https://github.com/detekt/detekt)以及[ktlint](https://github.com/pinterest/ktlint)。
+由于我们团队开发已实现全 Kotlin 化， Kotlin 常用的静态代码扫描方案有 [Detekt](https://github.com/detekt/detekt) 以及 [ktlint](https://github.com/pinterest/ktlint) 。
 
 对比如下：
-![对比](images/Android静态代码扫描实践1-img1.png)
+![对比](images/2021-07-06-对比.png)
 
-由于我这边并不需要分析潜在性能与bug问题的功能，以及基于轻量化的目的，采用的是Kotlin官方推荐的[ktlint](https://github.com/pinterest/ktlint)工具。
+由于我这边并不需要分析潜在性能与bug问题的功能，以及基于轻量化的目的，采用的是Kotlin官方推荐的 [ktlint](https://github.com/pinterest/ktlint) 工具。
 
 ## ktlint的集成与使用
 
-我们采取了项目中使用Gradle集成ktlint的方式来集成ktlint规则，可参考[ktlint主页](https://github.com/pinterest/ktlint)。
+我们采取了项目中使用Gradle集成ktlint的方式来集成ktlint规则，可参考 [ktlint主页](https://github.com/pinterest/ktlint) 。
 
 ### 在项目根目录下的app目录下的build.gradle添加如下配置
 ```
@@ -99,7 +99,7 @@ title: Android静态代码扫描实践—1、静态代码扫描概述与初识kt
   Mac或者Lunix系统执行：./gradlew ktlint;   
   window系统执行：gradlew ktlint；  
   会执行代码检查任务，然后会在./app/build/文件夹生成ktlint.html报告。  
-  ![html报告](images/Android静态代码扫描实践1-img2.png)
+  ![html报告](images/2021-07-06-html报告.png)
 
 - 自动修改代码符合规范
 
@@ -110,5 +110,3 @@ title: Android静态代码扫描实践—1、静态代码扫描概述与初识kt
 ## 总结
 
 通过上文，我们理解了为何要进行静态代码扫描以及使用ktlint对项目代码进行扫描检查是否符合Kotlin官方代码风格规范，当然在实际实践中要如何限制团队成员遵守规范，毕竟不可能强行要求团队成员每次都使用gradle命令检查代码，这部分内容是我们下一步要讲解的内容。
-如果我的文章对你有帮助或启发，辛苦大佬们点个赞👍🏻，支持我一下。
-如果有错漏，欢迎大佬们指正，也欢迎大家一起讨论，感谢。
