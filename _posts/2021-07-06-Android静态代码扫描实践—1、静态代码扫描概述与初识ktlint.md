@@ -1,5 +1,8 @@
 ---
 title: Android静态代码扫描实践—1、静态代码扫描概述与初识ktlint
+tags:
+  - 代码规范
+  - ktlint
 ---
 
 ## 背景与问题
@@ -52,7 +55,7 @@ title: Android静态代码扫描实践—1、静态代码扫描概述与初识kt
 由于我们团队开发已实现全 Kotlin 化， Kotlin 常用的静态代码扫描方案有 [Detekt](https://github.com/detekt/detekt) 以及 [ktlint](https://github.com/pinterest/ktlint) 。
 
 对比如下：
-![对比](images/2021-07-06-对比.png)
+![对比](/images/2021-07-06-对比.png)
 
 由于我这边并不需要分析潜在性能与bug问题的功能，以及基于轻量化的目的，采用的是Kotlin官方推荐的 [ktlint](https://github.com/pinterest/ktlint) 工具。
 
@@ -99,7 +102,7 @@ title: Android静态代码扫描实践—1、静态代码扫描概述与初识kt
   Mac或者Lunix系统执行：./gradlew ktlint;   
   window系统执行：gradlew ktlint；  
   会执行代码检查任务，然后会在./app/build/文件夹生成ktlint.html报告。  
-  ![html报告](images/2021-07-06-html报告.png)
+  ![html报告](/images/2021-07-06-html报告.png)
 
 - 自动修改代码符合规范
 
