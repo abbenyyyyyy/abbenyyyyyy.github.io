@@ -52,7 +52,7 @@ val ruleSetProviders = rulesets.loadRulesets(experimental, debug, disabledRules)
 ```
 再进入看看[loadRulesets方法](https://github.com/pinterest/ktlint/blob/a0a146262bdc5fedd772e044e4bc8052a5c1f924/ktlint/src/main/kotlin/com/pinterest/ktlint/internal/RuleSetsLoader.kt#L12)
 
-![load-RuleSetProvider方法.png](/images/2021-07-22-load-RuleSetProvider方法.png)
+![load-RuleSetProvider方法.png](/images/2021-07-22-load-RuleSetProvider.png)
 
 可以看到加载了 Jar 里所有实现 ```RuleSetProvider``` 抽象类的类，当然还有一些过滤条件，而 ```RuleSetProvider``` 抽象类 ```get``` 方法返回了一系列实现 ```com.pinterest.ktlint.core.Rule``` 抽象类的规则类， 对后面的步骤还感兴趣的，大家可以去看 [ktlint](https://github.com/pinterest/ktlint) 的源码，这里我们只需要了解加载规则的流程。粗略总结如下图：
 
