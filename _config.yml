@@ -13,55 +13,28 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
-# theme: jekyll-theme-so-simple
-# remote_theme: mmistakes/so-simple-theme
-remote_theme: "mmistakes/so-simple-theme@3.2.0"
-# skin: "/assets/css/skins/dark.scss"
-skin: "/assets/css/skins/default.css"
-locale: zh-CHS
-title: "Benzan.Chen"
-description: "「日光本来并不是我们所应得的，月光也未曾向我们索取过户税。」"
-baseurl: "/so-simple-theme"
-url: "https://abbenyyyyyy.github.io"
-logo: "/images/avatar.png"
-date_format: "%B %-d, %Y"
-read_time: true
-words_per_minute: 200
-mathjax:
-  enable: true
-#  combo: "tex-mml-chtml"
-#  tags: "none"
-google_fonts:
-  - name: "Source Sans Pro"
-    weights: "400,400i,700,700i"
-  - name: "Lora"
-    weights: "400,400i,700,700i"
-google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
-disqus:
-  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
-twitter:
-  username: mmistakes # site's Twitter username
-
-# Liquid
-liquid:
-  error_mode: strict
+title: MM
+email:
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+twitter_username: username
+github_username: username
+minimal_mistakes_skin: default
+search: true
 
 # Build settings
 markdown: kramdown
-feed:
-  path: atom.xml
-
-# Pagination - https://jekyllrb.com/docs/pagination/
-paginate: 10
+remote_theme: mmistakes/minimal-mistakes
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
 paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# Search
-search_full_content: false
-
-# Taxonomy pages
-category_archive_path: "/categories/#"
-tag_archive_path: "/tags/#"
+include:
+  - _pages
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -75,53 +48,68 @@ tag_archive_path: "/tags/#"
 #   - vendor/gems/
 #   - vendor/ruby/
 
+# Plugins (previously gems:)
 plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
   - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
 
-# Collections
-collections:
-  recipes:
-    output: true
-    permalink: /:collection/:path/
+author:
+  name   : "First Lastname"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "My awesome biography constrained to a sentence or two goes here."
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/"
 
-# Front Matter Defaults
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/"
+
 defaults:
-  # Post defaults
+  # _posts
   - scope:
-      path: "_posts"
+      path: ""
       type: posts
     values:
-      layout: post
+      layout: single
+      author_profile: true
+      read_time: true
       comments: true
       share: true
-  # Recipe defaults
+      related: true
+  # _pages
   - scope:
-      path: "_recipes"
-      type: recipes
+      path: "_pages"
+      type: pages
     values:
-      layout: post
-      comments: true
-      share: true
+      layout: single
+      author_profile: true
 
-# Site Author
-author:
-  name: Benzan.Chen
-  picture: /images/avatar.png
-  email: abbenyyyyyy@qq.com
-  twitter:
-  links:
-    - title: GitHub
-      url: https://github.com/abbenyyyyyy
-      icon: fab fa-github-square
-
-# Footer Links
-footer_links:
-  - title: Feed
-    url: atom.xml
-    icon: fas fa-rss-square
-  - title: GitHub
-    url: https://github.com/abbenyyyyyy
-    icon: fab fa-github-alt
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
