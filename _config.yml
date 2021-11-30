@@ -16,7 +16,7 @@
 
 # theme: jekyll-theme-so-simple
 remote_theme: mmistakes/so-simple-theme
-skin: "/assets/css/skins/dark.css"
+skin: "/assets/css/skins/dark.scss"
 locale: zh-CHS
 title: "Benzan.Chen"
 description: "「日光本来并不是我们所应得的，月光也未曾向我们索取过户税。」"
