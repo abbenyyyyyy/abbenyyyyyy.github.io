@@ -9,6 +9,8 @@ tags:
 在前面的文章讲解了实际实践中如何配合 GitLab CI/CD 落实团队代码风格规范的统一，而其中 GitLab CI/CD 流程需要有 GitLab Runner 工具配套来跑对应项目要执行的流水线job。  
 当然，配置 GitLab Runner 这件事你可以花10块钱请运维小哥哥喝杯蜜雪冰城，然后让他帮忙。如果你还想对于配置 GitLab Runner 与编写 .gitlab-ci.yml 有所了解，请继续阅读。
 
+<!--more-->
+
 ## GitLab Runner简介
 回顾一下 GitLab CI/CD 的工作流程：
 - 首先，定义 .gitlab-ci.yml 文件。在这个文件中就定义了要执行的 job 和命令；
