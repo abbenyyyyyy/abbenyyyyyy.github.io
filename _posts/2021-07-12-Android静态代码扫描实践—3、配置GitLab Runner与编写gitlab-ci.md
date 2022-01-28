@@ -4,6 +4,7 @@ tags:
   - 代码规范
   - ktlint
   - Android
+key: blog-comments-2021-07-12
 ---
 
 在前面的文章讲解了实际实践中如何配合 GitLab CI/CD 落实团队代码风格规范的统一，而其中 GitLab CI/CD 流程需要有 GitLab Runner 工具配套来跑对应项目要执行的流水线job。  
