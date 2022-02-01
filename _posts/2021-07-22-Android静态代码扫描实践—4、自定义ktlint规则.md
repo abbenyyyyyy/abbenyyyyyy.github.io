@@ -4,6 +4,7 @@ tags:
   - 代码规范
   - ktlint
   - Android
+key: blog-comments-2021-07-22
 ---
 
 前面3篇文章，我们介绍了静态代码扫描在团队的重要性以及在实际团队实践中如何使用Gitlab CI/CD配合静态代码扫描实现让团队成员低感知地遵守代码规范。而在之前我们的实践中仅仅是使用了 [ktlint](https://github.com/pinterest/ktlint) 实现了[Kotlind的官方代码风格规范](https://kotlinlang.org/docs/coding-conventions.html)检查，但在实际开发过程中，我们还会有更多团队中的代码规范，如日志打印方法的统一、每个activity文件必须要有注释等。  

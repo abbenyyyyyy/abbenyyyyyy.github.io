@@ -4,6 +4,7 @@ tags:
   - 代码规范
   - ktlint
   - Android
+key: blog-comments-2021-07-08
 ---
 
 前文讲解了为何要进行静态代码扫描以及使用ktlint对项目代码进行扫描检查是否符合[Kotlind的官方代码风格规范](https://kotlinlang.org/docs/coding-conventions.html)，在实践中要如何限制团队成员必须遵守规范，毕竟不可能强行要求团队成员每次都使用gradle命令检查代码，我们团队使用的是与GitLab CI/CD流程相结合。
