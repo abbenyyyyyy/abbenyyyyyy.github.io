@@ -1,5 +1,5 @@
 ---
-title: IDEA 插件开发(一):理论基础
+title: Android Studio 插件开发(一):理论基础
 tags:
   - IDEA Plugin
   - Android Studio
@@ -164,7 +164,7 @@ IDEA 线程可区分为主线程、后台线程等多个线程,其中主线程�
 
 ## 调试与编译发布
 
-在开发 IDEA 插件的过程中,可以使用 `runIde` gradle 命令来调试插件,该命令会启动 IDEA 以及自动安装你开发中的插件。若想修改该命令,可以在项目根目录的 `build.gradle.kts` 中的修改 `runIde` 语法块.如下是设定 `runIde` 启动 Android Studio 的示例。
+在开发 IDEA 插件的过程中,可以使用 `runIde` gradle 命令来调试插件,该命令会启动 IDEA 以及自动安装你开发中的插件。若想修改该命令,可以在项目根目录的 `build.gradle.kts` 中的重写 `runIde` 语法块.如下是设定 `runIde` 启动 Android Studio 的示例。
 
 ```kotlin
 ...
