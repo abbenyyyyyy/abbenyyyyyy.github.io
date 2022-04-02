@@ -54,7 +54,7 @@ key: blog-comments-2021-06-15
 
 ### 实现效果
 
-![演示视频](/images/2021-06-15-Quick-Create-Android-Template效果.mp4)
+![演示视频](/images/2021-06-15-Quick-Create-Android-Template效果.gif)
 
 [文章项目代码仓库](https://github.com/abbenyyyyyy/Quick-Create-Android-Template),可供参考与编译,具体实现流程在下面的文章讲述。
 
