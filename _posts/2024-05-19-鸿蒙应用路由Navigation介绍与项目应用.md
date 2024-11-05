@@ -10,9 +10,9 @@ key: blog-comments
 
 <!--more-->
 ## 前言
-   鸿蒙官方在2024年05月11日发布了OpenHarmony SDK 5.0.0.22 (API 12 Canary3) , 在这次更新发布了最新的路由方案 [Navigation](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/arkts-navigation-navigation-V5) ,并建议开发者不再使用 router 页面导航，后续也将不再对 router 进行迭代维护。 具体可以查阅 [router和Navigation的技术选择、推荐使用场景和演进策略是什么](https://developer.huawei.com/consumer/cn/doc/harmonyos-faqs-V5/faqs-arkui-11-V5).
+鸿蒙官方在2024年05月11日发布了OpenHarmony SDK 5.0.0.22 (API 12 Canary3) , 在这次更新发布了最新的路由方案 [Navigation](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/arkts-navigation-navigation-V5) ,并建议开发者不再使用 router 页面导航，后续也将不再对 router 进行迭代维护。 具体可以查阅 [router和Navigation的技术选择、推荐使用场景和演进策略是什么](https://developer.huawei.com/consumer/cn/doc/harmonyos-faqs-V5/faqs-arkui-11-V5).
    
-   下面我们从简单的例子学习 [Navigation](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/arkts-navigation-navigation-V5) 的使用。
+下面我们从简单的例子学习 [Navigation](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/arkts-navigation-navigation-V5) 的使用。
 
 
 ## Navigation 主要概念
